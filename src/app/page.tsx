@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { InventoryDemo } from "@/components/inventory-demo";
 import { LeadScanDemo } from "@/components/lead-scan-demo";
 import { ReceiptDemo } from "@/components/receipt-demo";
+import { ReviewReplyDemo } from "@/components/review-reply-demo";
 
 export default function Home() {
   return (
@@ -46,9 +47,17 @@ export default function Home() {
           <InventoryDemo />
         </DemoSection>
 
+        <DemoSection
+          index="04"
+          title="Every review answered, even the ones you missed."
+          description="Answering reviews is how strangers decide you're worth trying, and it's the first job that slips when you're busy actually running the place. This one drafts the replies and waits for your go-ahead."
+        >
+          <ReviewReplyDemo />
+        </DemoSection>
+
         <section className="mx-auto max-w-3xl px-6 pb-14">
           <p className="text-sm text-muted">
-            Every business has jobs like these three. If one of yours came to
+            Every business has jobs like these four. If one of yours came to
             mind while you watched, that&apos;s the one worth automating
             first. Get in touch through{" "}
             <a
