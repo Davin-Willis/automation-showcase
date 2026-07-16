@@ -1,5 +1,6 @@
 import { DemoSection } from "@/components/demo-section";
 import { Footer } from "@/components/footer";
+import { InventoryDemo } from "@/components/inventory-demo";
 import { LeadScanDemo } from "@/components/lead-scan-demo";
 import { ReceiptDemo } from "@/components/receipt-demo";
 
@@ -37,12 +38,28 @@ export default function Home() {
           <LeadScanDemo />
         </DemoSection>
 
-        {/* Demo 03 (manual vs automated before/after) slots in here
-            as another <DemoSection> block. */}
+        <DemoSection
+          index="03"
+          title="Never run out of your best seller again."
+          description="Running out of stock doesn't just cost you the sale in front of you. It sends a regular somewhere else. This one watches the shelves, flags what's short, and drafts the reorder before you've even noticed."
+        >
+          <InventoryDemo />
+        </DemoSection>
+
         <section className="mx-auto max-w-3xl px-6 pb-14">
           <p className="text-sm text-muted">
-            One more demo is on the way: a side-by-side of a workday with and
-            without the robots.
+            Every business has jobs like these three. If one of yours came to
+            mind while you watched, that&apos;s the one worth automating
+            first. Get in touch through{" "}
+            <a
+              href="https://davinwillis.dev"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
+            >
+              davinwillis.dev
+            </a>
+            .
           </p>
         </section>
       </main>
