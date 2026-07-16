@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Automation Showcase
 
-## Getting Started
+Interactive, plain-language demos that make small business automation visible. The first demo animates a pile of messy bank-statement lines sorting themselves into a clean, categorized spreadsheet with a counting total. All data is simulated and everything runs in the browser.
 
-First, run the development server:
+Live at [davin-willis.github.io/automation-showcase](https://davin-willis.github.io/automation-showcase/). Linked from the services section of [davinwillis.dev](https://davinwillis.dev).
+
+## AI-assisted development
+
+Built with AI-assisted development. All architecture, design, and implementation decisions are my own.
+
+## How the demo works
+
+Each fake transaction exists in two forms: the raw statement string and its clean parsed row. The pile and the table share Framer Motion layoutIds, so one state change flies every line from its scattered position into its table row with a staggered spring. The total counts up once the last row lands. Reduced-motion users get an instant crossfade instead.
+
+## Stack
+
+- Next.js (App Router, TypeScript, static export)
+- Tailwind CSS v4
+- Framer Motion (layout animations, respects prefers-reduced-motion)
+- Fonts: Bricolage Grotesque, Public Sans, Spline Sans Mono via next/font
+- Deployed to GitHub Pages via GitHub Actions
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
