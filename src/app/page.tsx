@@ -1,3 +1,4 @@
+import { Closing } from "@/components/closing";
 import { DemoSection } from "@/components/demo-section";
 import { Footer } from "@/components/footer";
 import { InventoryDemo } from "@/components/inventory-demo";
@@ -55,22 +56,7 @@ export default function Home() {
           <ReviewReplyDemo />
         </DemoSection>
 
-        <section className="mx-auto max-w-3xl px-6 pb-14">
-          <p className="text-sm text-muted">
-            Every business has jobs like these four. If one of yours came to
-            mind while you watched, that&apos;s the one worth automating
-            first. Get in touch through{" "}
-            <a
-              href="https://davinwillis.dev"
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
-            >
-              davinwillis.dev
-            </a>
-            .
-          </p>
-        </section>
+        <Closing />
       </main>
 
       <Footer />
