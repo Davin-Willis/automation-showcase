@@ -1,65 +1,45 @@
-import Image from "next/image";
+import { DemoSection } from "@/components/demo-section";
+import { Footer } from "@/components/footer";
+import { ReceiptDemo } from "@/components/receipt-demo";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <header className="mx-auto max-w-3xl px-6 pt-20 pb-6 sm:pt-28">
+        <p className="text-xs font-bold tracking-[0.2em] text-accent uppercase">
+          Automation, shown instead of explained
+        </p>
+        <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
+          You do this by hand every week. I make it automatic.
+        </h1>
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+          If you run a business, you already do jobs like the one below:
+          copying numbers off receipts into a spreadsheet, week after week.
+          Watch what happens when software does it instead.
+        </p>
+      </header>
+
+      <main>
+        <DemoSection
+          index="01"
+          title="Messy receipts into a clean spreadsheet."
+          description="Ten transactions, exactly the way they look on a bank statement. One click, and they file themselves."
+        >
+          <ReceiptDemo />
+        </DemoSection>
+
+        {/* Demos 02 (lead-gen scanner) and 03 (manual vs automated
+            before/after) slot in here as more <DemoSection> blocks. */}
+        <section className="mx-auto max-w-3xl px-6 pb-14">
+          <p className="text-sm text-muted">
+            More demos are on the way: a lead finder that scans a whole city
+            overnight, and a side-by-side of a workday with and without the
+            robots.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
