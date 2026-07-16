@@ -1,5 +1,6 @@
 import { DemoSection } from "@/components/demo-section";
 import { Footer } from "@/components/footer";
+import { LeadScanDemo } from "@/components/lead-scan-demo";
 import { ReceiptDemo } from "@/components/receipt-demo";
 
 export default function Home() {
@@ -28,13 +29,20 @@ export default function Home() {
           <ReceiptDemo />
         </DemoSection>
 
-        {/* Demos 02 (lead-gen scanner) and 03 (manual vs automated
-            before/after) slot in here as more <DemoSection> blocks. */}
+        <DemoSection
+          index="02"
+          title="A tool that finds opportunities while you sleep."
+          description="Plenty of good local businesses still have no website, and every one of them is a customer somebody hasn't reached yet. This tool reads public business listings and quietly builds you the list."
+        >
+          <LeadScanDemo />
+        </DemoSection>
+
+        {/* Demo 03 (manual vs automated before/after) slots in here
+            as another <DemoSection> block. */}
         <section className="mx-auto max-w-3xl px-6 pb-14">
           <p className="text-sm text-muted">
-            More demos are on the way: a lead finder that scans a whole city
-            overnight, and a side-by-side of a workday with and without the
-            robots.
+            One more demo is on the way: a side-by-side of a workday with and
+            without the robots.
           </p>
         </section>
       </main>
